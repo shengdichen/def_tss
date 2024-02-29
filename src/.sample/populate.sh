@@ -1,12 +1,11 @@
-#!/usr/bin/env bash
+#!/usr/bin/env dash
 
-copy() {
-    dir=$1
-    cp sample.lyx ../"$dir"/"$1".lyx
+__copy() {
+    cp "./sample.lyx" "../${1}/${1}.lyx"
 }
 
-copy "p1"
-copy "p2"
-copy "p3"
-copy "p4"
-copy "p5"
+__copy "p1"
+__copy "p2"
+__copy "p3"
+__copy "p4"
+__copy "p5"
